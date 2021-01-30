@@ -1,0 +1,5 @@
+FROM openjdk:11-jre-slim
+COPY target/covid-cases-back.war /usr/app/
+WORKDIR /usr/app
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "covid-cases-back.war"]
